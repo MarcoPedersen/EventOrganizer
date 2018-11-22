@@ -1,6 +1,7 @@
 public class Arrangement {
     private String name;
     private String type;
+    private int id;
     private int arrangementDuration;
     private String description;
     private String additionalInfo;
@@ -23,6 +24,10 @@ public class Arrangement {
 
         public String getAdditionalInfo(){
             return additionalInfo;
+        }
+
+        public int getId() {
+            return id;
         }
 
 }
