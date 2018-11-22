@@ -1,4 +1,4 @@
-public class Secretary {
+public class Secretary extends User{
 
 }
 
