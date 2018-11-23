@@ -1,15 +1,21 @@
-import javax.xml.crypto.Data;
-
+import java.util.Scanner;
 public class ArrangementHandler {
-
-    public static Database database;
 
     public static void main(String[] args) {
 
-        String connect = "INSERT INTO `arrangements`(`uid`, `name`, `type`, `info`, `yy1`, `MM1`, `dd1`, `hh1`, `mm_1`, " +
-                        "`ss1`, `yy2`, `MM2`, `dd2`, `hh2`, `mm_2`, `ss2`) VALUES (1, 'ohyeah', '" + arrangement.type + "', '"
-                         + arrangement.info + "', 2000, 2, 28, 00, 00, 00, 2001, 2, 28, 00, 00, 00)";
-        database.connectToDatabase(connect);
+        Database.connectToDatabase();
+        Scanner login = new Scanner(System.in);
 
+        System.out.println("Brugernavn: ");
+        String u = login.nextLine();
+        System.out.println("Kodeord: ");
+        String p = login.nextLine();
+
+        Database.userLogin(u, p);
+    }
+
+    public static String getUrl() {
+        String url;
+        return url = "jdbc:mysql://212.237.138.123:3306/thomas?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
     }
 }
