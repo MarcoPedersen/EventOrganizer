@@ -27,6 +27,7 @@ public class Secretary extends User{
                 additionalInfo = arrScanner.nextLine();
 
                 try {
+                    Database.getConnect().createStatement();
                     a.makeArrangement(aDuration, name, type, description, additionalInfo);
                 } catch (SQLException e) {
                     System.out.println(e.getMessage());

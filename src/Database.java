@@ -59,7 +59,7 @@ public class Database {
                             System.out.println("fail");
                             break;
                     }
-                } else if(!u.equals(username) || !p.equals(password)){
+                } else {
                     System.out.println("Forkert brugernavn eller kodeord.");
                 }
             }
