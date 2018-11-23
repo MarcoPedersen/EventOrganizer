@@ -1,4 +1,5 @@
-import javax.xml.crypto.Data;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -47,12 +48,12 @@ public class Arrangement {
 
         String sql = "INSERT INTO `arrangement`(`id`, `arrangementDuration`, `name`, `type`,`description`,`additionalInfo`) VALUES (null , \"" + arrangementDuration + "\", \"" + name + "\", \"" + type + "\", \"" + description + "\" , \"" + additionalInfo + "\")";
 
-        st = Database.getConnect().createStatement();
-        st.execute(sql);
-        st.close();
+            st = Database.getConnect().createStatement();
+            st.execute(sql);
+            System.out.println("Du har nu tilføjet et arrangement.");
+            st.close();
+
 
     }
-
-
 
 }
