@@ -48,13 +48,18 @@ public class Database {
                     System.out.println("Du er nu logget ind");
                     System.out.println("Velkommen, " + name + ". Din rolle er: " + role);
 
-                    if(role.equals("Secretary")) {
-                        s.secretaryLogin();
-                    } else {
-                        f.facilitatorLogin();
+                    switch (role) {
+                        case "Secretary":
+                            s.secretaryLogin();
+                            break;
+                        case "Facilitator":
+                            f.facilitatorLogin();
+                            break;
+                        default:
+                            System.out.println("fail");
+                            break;
                     }
-
-                } else {
+                } else if(!u.equals(username) || !p.equals(password)){
                     System.out.println("Forkert brugernavn eller kodeord.");
                 }
             }
