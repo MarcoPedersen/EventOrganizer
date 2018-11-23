@@ -3,7 +3,7 @@ public class Attendee {
     private String type;
 
     public String getName() {
-        return name;
+    return name;
     }
 
     public String getType() {

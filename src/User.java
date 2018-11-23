@@ -1,23 +1,10 @@
 public class User {
+    static int id;
+    static String aDuration;
+    static String name;
+    static String type;
+    static String description;
+    static String additionalInfo;
 
-    private int id;
-    private String username;
-    private String password;
-    private String name;
 
-    public int getId() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getName() {
-        return name;
-    }
 }
