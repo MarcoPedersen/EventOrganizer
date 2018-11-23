@@ -12,19 +12,23 @@ public class Database {
     private static Secretary s;
     private static Facilitator f;
 
-        public static void connectToDatabase() {
+    public static String getUrl() {
+        String url;
+        return url = "jdbc:mysql://212.237.138.123:3306/thomas?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+    }
 
-            try {
-                st = getConnect().createStatement();
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-            }
-        }
+    public static void connectToDatabase() {
 
-        public static Connection getConnect() throws SQLException {
-            String url = ArrangementHandler.getUrl();
-            return connect = DriverManager.getConnection(url, "thomas", "123456");
+        try {
+            st = getConnect().createStatement();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
+    }
+
+    public static Connection getConnect() throws SQLException {
+        return connect = DriverManager.getConnection(getUrl(), "thomas", "123456");
+    }
 
     public static void userLogin(String u, String p) {
 
