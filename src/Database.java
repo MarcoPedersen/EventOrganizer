@@ -13,8 +13,8 @@ public class Database {
     private static Facilitator f;
 
         public static String getUrl() {
-            String url;
-            return url = "jdbc:mysql://212.237.138.123:3306/thomas?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+            final String url = "jdbc:mysql://212.237.138.123:3306/thomas?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+            return url;
         }
 
         public static void connectToDatabase() {
