@@ -44,9 +44,9 @@ public class Arrangement {
         return additionalInfo;
     }
 
-    public static void makeArrangement(String arrangementDuration, String name, String type, String description, String additionalInfo) throws SQLException {
+    public static void makeArrangement(String arrangementDuration, String name, String type, String description, String additionalInfo, String attendeeNames) throws SQLException {
 
-        String sql = "INSERT INTO `arrangement`(`id`, `arrangementDuration`, `name`, `type`,`description`,`additionalInfo`) VALUES (null , \"" + arrangementDuration + "\", \"" + name + "\", \"" + type + "\", \"" + description + "\" , \"" + additionalInfo + "\")";
+        String sql = "INSERT INTO `arrangement`(`id`, `arrangementDuration`, `name`, `type`,`description`,`additionalInfo`,`attendeeNames`) VALUES (null , \"" + arrangementDuration + "\", \"" + name + "\", \"" + type + "\", \"" + description + "\" , \"" + additionalInfo + "\" , \"" + Secretary.getAttendeeNames() + "\")";
 
             st = Database.getConnect().createStatement();
             st.execute(sql);
