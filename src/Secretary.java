@@ -32,8 +32,6 @@ public class Secretary extends User{
                 attendeeCount = arrScanner.nextInt();
                 System.out.print("");
                 arrScanner.nextLine();
-                System.out.println("Beskrivelse: ");
-                description = arrScanner.nextLine();
                 int tempCount = 0;
                 while(attendeeCount > tempCount) {
                     System.out.println("Næste: ");
@@ -43,6 +41,9 @@ public class Secretary extends User{
                         attendeeNames = attendeeNames + ", ";
                     }
                 }
+                System.out.println("Beskrivelse: ");
+                description = arrScanner.nextLine();
+
                 System.out.println("Anden info: ");
                 additionalInfo = arrScanner.nextLine();
 
